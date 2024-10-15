@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TheBestestVideogame.zip</string>
+    <string name="opt1">The front</string>
+    <string name="opt2">The quarry</string>
+    <string name="opt3">Dark Souls 3</string>
+    <string name="opt4">Concord</string>
+    <string name="pregunta">¿Cuál es el mejor juego?</string>
+    <string name="cualEscoges">A ver cual escoges…</string>
+    <string name="veoQue">Veo que te gusta el</string>
+    <string name="teMola">¡Sí que te mola!</string>
+    <string name="noTeMola">¡¿No te molan!?</string>
+    <string name="teGustaEncuesta">¿Te gusta la encuesta?</string>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PrimeNumberCalculator</string>
+    <string name="textIntroduce">Introduce un número primo</string>
+    <string name="buttonComprobar">Comprobar</string>
+    <string name="buttonReiniciar">Reiniciar</string>
+    <string name="editNumero">Tu número</string>
+    <string name="noPrimo">No es un número primo</string>
+    <string name="primo">Es un número primo</string>
+
+</resources>

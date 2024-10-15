@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">IntentExplicito</string>
+    <string name="eleccionVacia">Aquí saldrá tu elección</string>
+    <string name="seleccionarProvincia">Selecciona tu provincia</string>
+    <string name="eleccionProvincia">Se ha seleccionado</string>
+    <string name="bizkaia">Bizkaia</string>
+    <string name="gipuzkoa">Gipuzkoa</string>
+    <string name="araba">Araba</string>
+    <string name="murcia">Murtzia</string>
+    <string name="jaen">Jaeia</string>
+    <string name="almeria">Almerixe</string>
+</resources>
