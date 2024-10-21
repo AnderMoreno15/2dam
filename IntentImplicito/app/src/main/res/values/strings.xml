@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">IntentsImplicitos</string>
+    <string name="url">URL:</string>
+    <string name="lat">Latitud:</string>
+    <string name="lon">Longitud:</string>
+    <string name="email">email:</string>
+    <string name="btnweb">Ir a WEB</string>
+    <string name="btnmapa">Ir a mapa</string>
+    <string name="btnmail">Enviar email</string>
+    <string name="escribeUrl">Por favor, escribe una URL</string>
+    <string name="escogeApp">Escoge</string>
+    <string name="error">Error al procesar la solicitud</string>
+    <string name="escribeLatLong">Por favor introduce latitud y longitud válidas</string>
+    <string name="escribeMail">Por favor introduce un mail válido</string>
+</resources>
