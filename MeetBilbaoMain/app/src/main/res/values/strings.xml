@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MeetBilbaoMain</string>
+    <string name="appTitle">Meet Bilbao</string>
+    <string name="appDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla aliquet velit ac lorem tincidunt, non dapibus justo sollicitudin. Donec laoreet faucibus metus, ut interdum est suscipit a.</string>
+    <string name="guggenheim">Guggenheim</string>
+    <string name="sanMames">San Mamés</string>
+    <string name="bec">BEC</string>
+    <string name="bilbao">Bilbao</string>
+</resources>
