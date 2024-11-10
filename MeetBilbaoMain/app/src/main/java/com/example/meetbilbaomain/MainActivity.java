@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -27,20 +28,24 @@ public class MainActivity extends AppCompatActivity {
         });
 
         ImageButton ibBilbao = findViewById(R.id.IBBilbao);
-        ibBilbao.setOnClickListener(new View.OnClickListener() {
+        ibBilbao.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                // Crear el Intent para abrir la URL
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.bilbao.eus"));
-
-                // Intenta iniciar la actividad para abrir el navegador
-                try {
-                    startActivity(intent);
-                } catch (Exception e) {
-                    // Muestra un Toast si ocurre un error
-                    Toast.makeText(MainActivity.this, "Error al abrir el sitio web", Toast.LENGTH_SHORT).show();
-                }
+                onClickBilbao(v);
             }
         });
+    }
+
+    private void onClickBilbao(View v) {
+        // Crear el Intent para abrir la URL
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.bilbao.eus"));
+
+        // Intenta iniciar la actividad para abrir el navegador
+        try {
+            startActivity(intent);
+        } catch (Exception e) {
+            // Muestra un Toast si ocurre un error
+            Toast.makeText(MainActivity.this, "Error al abrir el sitio web", Toast.LENGTH_SHORT).show();
+        }
     }
 }
