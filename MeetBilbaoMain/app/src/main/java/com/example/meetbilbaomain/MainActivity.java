@@ -34,18 +34,67 @@ public class MainActivity extends AppCompatActivity {
                 onClickBilbao(v);
             }
         });
+
+        ImageButton ibBec = findViewById(R.id.IBBec);
+        ibBec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClickBec(v);
+            }
+        });
+
+        ImageButton ibGuggenheim = findViewById(R.id.IBGuggenheim);
+        ibBec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClickGuggenheim(v);
+            }
+        });
+
+        ImageButton ibSanMames = findViewById(R.id.IBSanMames);
+        ibBec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClickSanMames(v);
+            }
+        });
+
     }
 
     private void onClickBilbao(View v) {
-        // Crear el Intent para abrir la URL
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.bilbao.eus"));
 
-        // Intenta iniciar la actividad para abrir el navegador
         try {
             startActivity(intent);
         } catch (Exception e) {
-            // Muestra un Toast si ocurre un error
             Toast.makeText(MainActivity.this, "Error al abrir el sitio web", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void onClickBec(View v) {
+        try {
+            Intent intent = new Intent(MainActivity.this, BecActivity.class);
+            startActivity(intent);
+        } catch (Exception e) {
+            Toast.makeText(this, "Error al abrir la actividad BEC", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void onClickGuggenheim(View v) {
+        try {
+            Intent intent = new Intent(MainActivity.this, GuggenheimActivity.class);
+            startActivity(intent);
+        } catch (Exception e) {
+            Toast.makeText(this, "Error al abrir la actividad Guggenheim", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void onClickSanMames(View v) {
+        try {
+            Intent intent = new Intent(MainActivity.this, SanMamesActivity.class);
+            startActivity(intent);
+        } catch (Exception e) {
+            Toast.makeText(this, "Error al abrir la actividad San Mamés", Toast.LENGTH_SHORT).show();
         }
     }
 }
