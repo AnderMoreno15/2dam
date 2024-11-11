@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         ibBec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickBec(v);
+                //onClickBec(v);
             }
         });
 
@@ -47,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         ibBec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickGuggenheim(v);
+                //onClickGuggenheim(v);
             }
         });
 
@@ -55,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         ibBec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickSanMames(v);
+                //onClickSanMames(v);
             }
         });
 
@@ -71,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
     public void onClickBec(View v) {
         try {
             Intent intent = new Intent(MainActivity.this, BecActivity.class);
@@ -96,5 +96,5 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             Toast.makeText(this, "Error al abrir la actividad San Mamés", Toast.LENGTH_SHORT).show();
         }
-    }
+    }*/
 }
