@@ -1,11 +1,11 @@
 package com.example.practica10audiovideo;
 
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.MediaController;
+
+import android.net.Uri;
+import android.view.MotionEvent;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,17 +15,22 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.io.IOException;
 
-public class AudioPlayerActivity extends AppCompatActivity implements MediaController.MediaPlayerControl{
+public class AudioActivity extends AppCompatActivity implements MediaController.MediaPlayerControl {
 
     public static final int AUDIO_PLAYER_ACTIVITY_1 = 1;
     private MediaPlayer mediaPlayer = new MediaPlayer();
-    private MediaController mediaController=new MediaController(this);
+    private MediaController mediaController = new MediaController(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_audio_player);
+        setContentView(R.layout.activity_audio);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
 
         try {
             mediaPlayer.setDataSource(this, Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.always));
@@ -42,8 +47,8 @@ public class AudioPlayerActivity extends AppCompatActivity implements MediaContr
 
         mediaController.setMediaPlayer(this);
         mediaController.setAnchorView(findViewById(R.id.main));
-
     }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         mediaController.show();

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,26 +17,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public static final int MAIN_ACTIVITY_1 = 1;
 
-    private MediaPlayer mediaPlayer=new MediaPlayer();
+    private MediaPlayer mediaPlayer = new MediaPlayer();
 
     Button btnAudio, btnVideo;
-    TextView tfMain;
+    TextView tvElige;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-
-        tfMain = findViewById(R.id.tfMain);
-        tfMain.setText(R.string.txt_choose_media);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+        tvElige = findViewById(R.id.TVElige);
+        tvElige.setText(R.string.elige);
 
         btnAudio = findViewById(R.id.btnAudio);
-        btnAudio.setText(R.string.btn_audio);
+        btnAudio.setText(R.string.audio);
         btnAudio.setOnClickListener(this);
 
         btnVideo = findViewById(R.id.btnVideo);
-        btnVideo.setText(R.string.btn_video);
+        btnVideo.setText(R.string.video);
         btnVideo.setOnClickListener(this);
     }
 
@@ -45,13 +48,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         Intent intent = new Intent();
         if (view == btnAudio){
-            intent.setClass(MainActivity.this, AudioPlayerActivity.class);
+            intent.setClass(MainActivity.this, AudioActivity.class);
             startActivity(intent);
         } else if (view == btnVideo) {
-            intent.setClass(MainActivity.this, VideoPlayerActivity.class);
+            intent.setClass(MainActivity.this, VideoActivity.class);
             startActivity(intent);
         }
     }
-
-
 }
